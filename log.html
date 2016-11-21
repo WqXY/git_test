@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="css/log.css" />
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//加载头部文件
+				$(".head").load("html/header.html",function(){
+					$(".h3_tit ul").hide();
+					$(".h3_tit").hover(function(){
+						$(".h3_tit ul").show();
+					},function(){
+						$(".h3_tit ul").hide();
+					});
+				});
+				
+				//加载尾部文件
+				$(".foot").load("html/footer.html");
+				
+				//随机产生验证码
+				$(".newMa").on("click",function(){
+					
+				});
+			});
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<div class="head"></div>
+		<div class="info curr clear">
+			<img src="img/banner1.jpg"/>
+		</div>
+		<div class="center curr clear">
+			<div class="img_fl fl"><img src="img/410-290.png"/></div>
+			<div class="rht fr">
+				<div class="form_log">
+					<h3>用户登录</h3>
+					<ul>
+						<li>
+							<div class="uname">用户名：</div>
+							<input type="text" id="uname" placeholder="邮箱地址/手机号"/>
+						</li>
+						<li>
+							<div class="uPassword">密码：</div>
+							<input type="text" id="upassword"/>
+						</li>
+						<li>
+							<div class="uname">验证码：</div>
+							<input class="txt_yzm" type="text" id="yzm"/>
+							<div class="newMa">sghh</div>
+						</li>
+						<li>
+							<input type="button" id="regist" value="立即登录" />
+							<input class="ck_save" type="checkbox" checked="checked"/>保存登录信息
+						</li>
+						<li class="li_last">
+							<a href="register.html">注册</a>|
+							<a href="#">忘记密码</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot"></div>
+	</body>
+</html>
